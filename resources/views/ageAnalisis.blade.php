@@ -13,8 +13,8 @@
     function drawChart25_29() {
 
         var data = new google.visualization.DataTable();``
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
+        data.addColumn('string', 'Status with Age between 25-29');
+        data.addColumn('number', 'Count per Education Level');
         data.addRows([
           ['High School or Below', {{$educationData["25-29"]["HighSchoolOrBelow"]["count"]}}],
           ['College', {{$educationData["25-29"]["college"]["count"]}}],
@@ -35,8 +35,8 @@
     function drawChart30_34() {
 
         var data = new google.visualization.DataTable();``
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
+        data.addColumn('string', 'Status with Age between 30-34');
+        data.addColumn('number', 'Count per Education Level');
         data.addRows([
           ['High School or Below', {{$educationData["30-34"]["HighSchoolOrBelow"]["count"]}}],
           ['College', {{$educationData["30-34"]["college"]["count"]}}],
@@ -57,8 +57,8 @@
 	function drawChart35_39() {
 
         var data = new google.visualization.DataTable();``
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
+        data.addColumn('string', 'Status with Age between 35-39');
+        data.addColumn('number', 'Count per Education Level');
         data.addRows([
           ['High School or Below', {{$educationData["35-39"]["HighSchoolOrBelow"]["count"]}}],
           ['College', {{$educationData["35-39"]["college"]["count"]}}],

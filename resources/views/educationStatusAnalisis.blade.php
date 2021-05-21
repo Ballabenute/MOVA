@@ -13,8 +13,8 @@
     function drawChartHighSchoolOrBelow() {
 
         var data = new google.visualization.DataTable();``
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
+        data.addColumn('string', 'Status at High School or Below Education');
+        data.addColumn('number', 'Count of Status');
         data.addRows([
           ['Paid Off', {{$statusData["HighSchoolOrBelow"]["paidoff"]["count"]}}],
           ['Collection', {{$statusData["HighSchoolOrBelow"]["collection"]["count"]}}],
@@ -34,8 +34,8 @@
     function drawChartCollege() {
 
         var data = new google.visualization.DataTable();``
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
+        data.addColumn('string', 'Status at College Education');
+        data.addColumn('number', 'Count of Status');
         data.addRows([
           ['Paid Off', {{$statusData["college"]["paidoff"]["count"]}}],
           ['Collection', {{$statusData["college"]["collection"]["count"]}}],
@@ -55,8 +55,8 @@
 	function drawChartBechalor() {
 
         var data = new google.visualization.DataTable();``
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
+        data.addColumn('string', 'Status at Bechalor Education');
+        data.addColumn('number', 'Count of Status');
         data.addRows([
           ['Paid Off', {{$statusData["bechalor"]["paidoff"]["count"]}}],
           ['Collection', {{$statusData["bechalor"]["collection"]["count"]}}],
@@ -76,8 +76,8 @@
 	function drawChartMasterOrAbove() {
 
         var data = new google.visualization.DataTable();``
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
+        data.addColumn('string', 'Status at Master or Above Education');
+        data.addColumn('number', 'Count of Status');
         data.addRows([
           ['Paid Off', {{$statusData["masterOrAbove"]["paidoff"]["count"]}}],
           ['Collection', {{$statusData["masterOrAbove"]["collection"]["count"]}}],

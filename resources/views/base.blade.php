@@ -6,32 +6,24 @@
 @section('content')
 	<script type="text/javascript">
 
-      // Load the Visualization API and the corechart package.
       google.charts.load('current', {'packages':['corechart']});
 
-      // Set a callback to run when the Google Visualization API is loaded.
       google.charts.setOnLoadCallback(drawChartGender);
 
-      // Callback that creates and populates a data table,
-      // instantiates the pie chart, passes in the data and
-      // draws it.
       function drawChartGender() {
 
-        // Create the data table.
-        var data = new google.visualization.DataTable();``
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Gender');
+        data.addColumn('number', 'Sum Gender');
         data.addRows([
           ['Male', {{$genderCount["male"]}}],
           ['Female', {{$genderCount["female"]}}]
         ]);
 
-        // Set chart options
         var options = {'title':'Gender Chart',
                        'width':800,
                        'height':600};
 
-        // Instantiate and draw our chart, passing in some options.
         var chart = new google.visualization.PieChart(document.getElementById('chart_gender'));
         chart.draw(data, options);
       }
@@ -40,10 +32,9 @@
 
       function drawChartAge() {
 
-        // Create the data table.
-        var data = new google.visualization.DataTable();``
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Age Range');
+        data.addColumn('number', 'Age Count');
         data.addRows([
           ['18-19', {{$ageCount["18-19"]}}],
           ['20-24', {{$ageCount["20-24"]}}],
@@ -55,13 +46,11 @@
           ['50 and Above', {{$ageCount["50AndAbove"]}}]
         ]);
 
-        // Set chart options
         var options = {'title':'Age Chart',
                        'width':800,
                        'height':600};
 
-        // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.PieChart(document.getElementById('chart_age'));
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_age'));
         chart.draw(data, options);
       }
 
@@ -69,10 +58,9 @@
 
       function drawChartEducation() {
 
-        // Create the data table.
-        var data = new google.visualization.DataTable();``
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Education Level');
+        data.addColumn('number', 'Total per Education Level');
         data.addRows([
           ['High School or Below', {{$educationCount["HighSchoolOrBelow"]}}],
           ['College', {{$educationCount["College"]}}],
@@ -80,12 +68,10 @@
           ['Master or Above', {{$educationCount["MasterOrAbove"]}}]
         ]);
 
-        // Set chart options
         var options = {'title':'Education Chart',
                        'width':800,
                        'height':600};
 
-        // Instantiate and draw our chart, passing in some options.
         var chart = new google.visualization.PieChart(document.getElementById('chart_education'));
         chart.draw(data, options);
       }
@@ -94,23 +80,20 @@
 
       function drawChartStatus() {
 
-        // Create the data table.
-        var data = new google.visualization.DataTable();``
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Status of Loan');
+        data.addColumn('number', 'Total per Status of Loan');
         data.addRows([
           ['Paid Off', {{$statusCount["paidoff"]}}],
           ['Collection', {{$statusCount["collection"]}}],
           ['Collection Paid Off', {{$statusCount["collectionPaidoff"]}}]
         ]);
 
-        // Set chart options
         var options = {'title':'Status Chart',
                        'width':800,
                        'height':600};
 
-        // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.PieChart(document.getElementById('chart_status'));
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_status'));
         chart.draw(data, options);
       }
 

@@ -13,8 +13,8 @@
     function drawChart25_29() {
 
         var data = new google.visualization.DataTable();``
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
+        data.addColumn('string', 'Status with Age between 25-29');
+        data.addColumn('number', 'Count per Loan Status');
         data.addRows([
           ['Paid Off', {{$statusData["25-29"]["paidoff"]["count"]}}],
           ['Collection', {{$statusData["25-29"]["collection"]["count"]}}],
@@ -34,8 +34,8 @@
     function drawChart30_34() {
 
         var data = new google.visualization.DataTable();``
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
+        data.addColumn('string', 'Status with Age between 30-34');
+        data.addColumn('number', 'Count per Loan Status');
         data.addRows([
           ['Paid Off', {{$statusData["30-34"]["paidoff"]["count"]}}],
           ['Collection', {{$statusData["30-34"]["collection"]["count"]}}],
@@ -55,8 +55,8 @@
 	function drawChart35_39() {
 
         var data = new google.visualization.DataTable();``
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
+        data.addColumn('string', 'Status with Age between 35-39');
+        data.addColumn('number', 'Count per Loan Status');
         data.addRows([
           ['Paid Off', {{$statusData["35-39"]["paidoff"]["count"]}}],
           ['Collection', {{$statusData["35-39"]["collection"]["count"]}}],

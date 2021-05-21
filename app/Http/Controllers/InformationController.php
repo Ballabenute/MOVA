@@ -23,7 +23,7 @@ class InformationController extends Controller
 
 		$genderCount["male"] = intval($genderData["count"]);
 
-		$genderCount["female"] = 500-$genderCount["male"];
+		$genderCount["female"] = 500 - $genderCount["male"];
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
