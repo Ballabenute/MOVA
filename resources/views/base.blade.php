@@ -90,30 +90,6 @@
         chart.draw(data, options);
       }
 
-      google.charts.setOnLoadCallback(drawChartTerms);
-
-      function drawChartTerms() {
-
-        // Create the data table.
-        var data = new google.visualization.DataTable();``
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
-        data.addRows([
-          ['7 Days', {{$termsCount["7days"]}}],
-          ['15 Days', {{$termsCount["15days"]}}],
-          ['30 Days', {{$termsCount["30days"]}}]
-        ]);
-
-        // Set chart options
-        var options = {'title':'Terms Chart',
-                       'width':800,
-                       'height':600};
-
-        // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.PieChart(document.getElementById('chart_terms'));
-        chart.draw(data, options);
-      }
-
       google.charts.setOnLoadCallback(drawChartStatus);
 
       function drawChartStatus() {
@@ -150,11 +126,6 @@
     <div style="display: inline-flex;">
 
       <div id="chart_education"></div>
-      <div id="chart_terms"></div>
-
-    </div>
-    <div style="display: inline-flex;">
-
       <div id="chart_status"></div>
 
     </div>

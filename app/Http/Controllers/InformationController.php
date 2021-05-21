@@ -121,7 +121,7 @@ class InformationController extends Controller
 
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-		$query = "SELECT COUNT(id) as count FROM loan WHERE terms = \"7\"";
+		/*$query = "SELECT COUNT(id) as count FROM loan WHERE terms = \"7\"";
 
 		$resp = $conn->query($query);
 
@@ -143,7 +143,7 @@ class InformationController extends Controller
 
 		$termsData = $db->RespIntoVar($resp, $col);
 
-		$termsCount["30days"] = intval($termsData["count"]);
+		$termsCount["30days"] = intval($termsData["count"]);*/
 
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -175,7 +175,7 @@ class InformationController extends Controller
 
 		$db->CloseCon($conn);
 
-		return view('base', compact('termsCount','ageCount','educationCount','genderCount','statusCount'));
+		return view('base', compact('ageCount','educationCount','genderCount','statusCount'));
 
 	}
 
