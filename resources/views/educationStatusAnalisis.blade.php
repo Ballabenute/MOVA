@@ -21,7 +21,7 @@
           ['Collection Paid Off', {{$statusData["HighSchoolOrBelow"]["collectionPaidoff"]["count"]}}]
         ]);
 
-        var options = {'title':'Loan Status at 25-29 Years Old',
+        var options = {'title':'Loan Status at High School or Below',
                        'width':800,
                        'height':600};
 
@@ -42,7 +42,7 @@
           ['Collection Paid Off', {{$statusData["college"]["collectionPaidoff"]["count"]}}]
         ]);
 
-        var options = {'title':'Loan Status at 30-34 Years Old',
+        var options = {'title':'Loan Status at College',
                        'width':800,
                        'height':600};
 
@@ -63,7 +63,7 @@
           ['Collection Paid Off', {{$statusData["bechalor"]["collectionPaidoff"]["count"]}}]
         ]);
 
-        var options = {'title':'Loan Status at 35-39 Years Old',
+        var options = {'title':'Loan Status at Bechalor',
                        'width':800,
                        'height':600};
 
@@ -84,7 +84,7 @@
           ['Collection Paid Off', {{$statusData["masterOrAbove"]["collectionPaidoff"]["count"]}}]
         ]);
 
-        var options = {'title':'Loan Status at 35-39 Years Old',
+        var options = {'title':'Loan Status at Master or Above',
                        'width':800,
                        'height':600};
 
